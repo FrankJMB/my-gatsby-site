@@ -1,5 +1,15 @@
 import type { GatsbyConfig } from "gatsby";
 
+//
+import adapter from "gatsby-adapter-netlify";
+
+module.exports = {
+  adapter: adapter({
+    excludeDatastoreFromEngineFunction: false,
+  }),
+}
+//
+
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `My Gatsby Site`,
